@@ -2,7 +2,7 @@ footer {
     height: 192px;
     width: min(calc(100% - 264px), calc(1280px - 264px));
     margin-left: max(100px, calc((100% - 1280px + 200px) / 2));
-    background: url("https://skinmc.net/img/headers/bubbletea.jpg");
+    background: url("https://iili.io/dY0Eas4.jpg");
     background-position: bottom; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; /* Resize the background image to cover the entire container */

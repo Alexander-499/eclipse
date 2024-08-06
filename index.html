@@ -31,6 +31,7 @@
   <script src="lists/items.js" defer></script>
 
   <!-- Scripts -->
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
   <script src="scripts/toggle-custom-input.js" defer></script>
   <script src="scripts/item-input.js" defer></script>
   <script src="scripts/textarea.js" defer></script>
@@ -42,6 +43,8 @@
   <!-- No Script -->
   <noscript>Either you have disabled JavaScript or your browser doesn't support it. Get a new Browser like Google Chrome, Microsoft Edge, Safari, Mozilla Firefox, Opera</noscript>
 </head>
+<meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+<div class="g-signin2" data-onsuccess="onSignIn"></div>
 <body>
   <header>
     <div class="header-content">
