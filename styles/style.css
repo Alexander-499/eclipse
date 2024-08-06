@@ -1,0 +1,434 @@
+.main-section {
+  width: 100%;
+  display: flex;
+  margin-top: 16px;
+  padding-bottom: 16px;
+}
+
+.main-section > div {
+  border-radius: 16px;
+  background-color: #242429;
+  box-shadow: 4px 4px 20px 8px rgba(0,0,0,0.3);
+}
+
+.command-input-section {
+  height: calc(100vh - 72px - 32px);
+  width: 66.7vw;
+  margin-left: 16px;
+  margin-right: 8px;
+}
+
+.command-output-section {
+  height: calc(100vh - 72px - 32px);
+  width: 33.3vw;
+  margin-left: 8px;
+  margin-right: 16px;
+}
+
+.main-section > div > h2 {
+  text-align: center;
+  font-size: 40px;
+  font-family: Manrope;
+  font-weight: 700;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.main-section > div .separator {
+  height: 1px;
+  width: 20vw;
+  background: linear-gradient(355deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.output-inner {
+  height: calc(100% - 137px - 25px);
+  width: calc(100% - 24px);
+  background-color: #0c0c0e;
+  margin-top: 32px;
+  margin-left: 12px;
+  border-radius: 12px;
+  box-shadow: inset 0px 0px 20px 10px rgba(0,0,0,0.2);
+}
+
+.output-inner > textarea {
+  border-radius: 12px;
+  border: none;
+  height: calc(100% - 29px - 12px);
+  width: 100%;
+  background-color: transparent;
+  resize: none;
+  color: white;
+  font-family: Consolas;
+  font-size: 20px;
+  padding-top: 12px;
+}
+
+.output-inner-bottom {
+  height: 24px;
+  width: 100%;
+  background-color: #181818;
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: #2b2b2b;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-family: Segoe UI;
+}
+
+.output-inner-bottom > p {
+  padding-bottom: 3px;
+  padding-left: 12px;
+}
+
+.output-inner-bottom > button {
+  border: none;
+  height: 100%;
+  display: flex;
+  text-align: center;
+  background-color: transparent;
+  cursor: pointer;
+  color: white;
+  align-items: center;
+  margin-left: 8px;
+  padding-bottom: 2px;
+  font-size: 14px;
+  transition-duration: 100ms;
+}
+
+.output-inner-bottom > button:hover {
+  margin-left: 6px;
+  font-size: 15px;
+}
+
+.output-inner-bottom > button:active {
+  margin-left: 8px;
+  font-size: 14px;
+}
+
+.output-inner-bottom > button p:not(.segoe-fluent-icons)  {
+  margin-left: 4px;
+}
+
+.input-inner {
+  height: calc(100% - 137px - 25px);
+  width: calc(100% - 24px);
+  background-color: #151515;
+  margin-top: 32px;
+  margin-left: 12px;
+  border-radius: 12px;
+  overflow: auto;
+}
+
+.input-inner h3 {
+  text-align: left;
+  font-size: 20px;
+  font-family: Manrope;
+  font-weight: 600;
+  padding-top: 16px;
+  margin-left: 24px;
+  margin-bottom: 16px;
+}
+
+.input-inner > div {
+  height: auto;
+  width: calc(100% - 24px - 12px);
+  background-color: #202020;
+  margin-left: 18px;
+  border-radius: 8px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.input-inner > div > div:not(.score-objectives-box) {
+  display: flex;
+}
+
+.input-inner-category-name {
+  width: 256px;
+  height: 40px;
+}
+
+.input-inner-category-name p {
+  text-align: center;
+  font-size: 16px;
+  font-family: Manrope;
+  font-weight: 600;
+  padding-top: 10px;
+}
+
+.input-inner-category-input {
+  width: calc(100% - 256px - 48px);
+  height: 40px;
+  display: flex;
+}
+
+.input-inner-category-input > input,
+.input-inner-category-input > select {
+  height: 32px;
+  margin-top: 2px;
+  border-width: 1px;
+  border-style: solid;
+  border-top-color: #353535;
+  border-right-color: #303030;
+  border-bottom-color: #303030;
+  border-left-color: #353535;
+  background-color: #2d2d2d;
+  color: white;
+  border-radius: 4px;
+  padding-left: 12px;
+  padding-right: 12px;
+  font-family: Segoe UI;
+  transition-duration: 200ms;
+}
+
+.input-inner-category-input > input::-webkit-outer-spin-button,
+.input-inner-category-input > input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.input-inner-category-input > select {
+  height: 34px;
+  margin-right: 4px;
+}
+
+option {
+  background-color: #2d2d2d;
+}
+
+.input-inner-category-input-input {
+  display: none;
+  margin-right: 4px;
+}
+
+.input-inner-category-info {
+  height: 34px;
+  width: 34px;
+  margin-top: 2px;
+  border-width: 1px;
+  border-style: solid;
+  border-top-color: #353535;
+  border-right-color: #303030;
+  border-bottom-color: #303030;
+  border-left-color: #353535;
+  background-color: #2d2d2d;
+  color: white;
+  border-radius: 4px;
+  padding-left: 10px;
+  padding-right: 14px;
+  transition-duration: 200ms;
+}
+
+.input-inner-category-input > input:hover,
+.input-inner-category-input > select:hover,
+.input-inner-category-info:hover,
+.input-inner-category-input-button:hover,
+.score-objectives-box-input-inner-category-info:hover,
+.score-objectives-box-input-inner-category-other:hover {
+  background-color: #323232;
+}
+
+.input-inner-category-input > input:active,
+.input-inner-category-input > select:active,
+.input-inner-category-info:active,
+.input-inner-category-input-button:active,
+.score-objectives-box-input-inner-category-info:active,
+.score-objectives-box-input-inner-category-other:active {
+  background-color: #272727;
+}
+
+/* Style the custom checkbox */
+.input-inner-category-input .checkmark {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #999999;
+  background-color: transparent;
+  cursor: pointer;
+  vertical-align: middle;
+  position: relative;
+  border-radius: 4px;
+  margin-top: 6px;
+  margin-left: 4px;
+  transition-duration: 200ms;
+}
+
+/* Style the checked state */
+.input-inner-category-input input[type=checkbox]:checked + .checkmark {
+  background-color: #4cc2ff;
+  border: 1px hidden #999999;
+  width: 22px;
+  height: 22px;
+}
+
+/* Hide the checkmark by default */
+.input-inner-category-input .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.input-inner-category-input input[type=checkbox]:checked + .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark icon */
+.input-inner-category-input .checkmark:after {
+  left: 8px;
+  top: 5px;
+  width: 4px;
+  height: 9px;
+  border: solid black;
+  border-width: 0 1px 1px 0;
+  transform: rotate(45deg);
+}
+
+.checkbox-container {
+  display: none;
+}
+
+.checkbox-container p {
+  font-family: Segoe UI;
+  margin-top: 6px;
+  margin-left: 8px;
+}
+
+.input-inner-category-input-button {
+  height: 34px;
+  width: 34px;
+  margin-top: 2px;
+  border-width: 1px;
+  border-style: solid;
+  border-top-color: #353535;
+  border-right-color: #303030;
+  border-bottom-color: #303030;
+  border-left-color: #353535;
+  background-color: #2d2d2d;
+  color: white;
+  border-radius: 4px;
+  padding-left: 10px;
+  padding-right: 14px;
+  transition-duration: 200ms;
+}
+
+.score-objectives-box-main {
+  margin-left: 256px;
+}
+
+.score-objectives-box {
+  width: 253px;
+  height: 120px;
+  display: flex;
+  margin-right: 6px;
+  background-color: red;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 6px;
+  border-radius: 4px;
+  border-width: 1px;
+  border-style: solid;
+  border-top-color: #353535;
+  border-right-color: #303030;
+  border-bottom-color: #303030;
+  border-left-color: #353535;
+  background-color: #222222;
+}
+
+.score-objectives-box > div {
+  display: block;
+}
+
+.score-objectives-box > div > div {
+  display: flex;
+  height: 38px;
+}
+
+.score-objectives-box-input-inner-category-input {
+  width: 223px;
+  height: 40px;
+  display: flex;
+}
+
+
+.score-objectives-box-input-inner-category-input > input{
+  height: 32px;
+  margin-top: 2px;
+  border-width: 1px;
+  border-style: solid;
+  border-top-color: #353535;
+  border-right-color: #303030;
+  border-bottom-color: #303030;
+  border-left-color: #353535;
+  background-color: #2d2d2d;
+  color: white;
+  border-radius: 4px;
+  padding-left: 12px;
+  padding-right: 12px;
+  font-family: Segoe UI;
+  transition-duration: 200ms;
+}
+
+.score-objectives-box-input-inner-category-input > input::-webkit-outer-spin-button,
+.score-objectives-box-input-inner-category-input > input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.score-objectives-box-input-inner-category-info,
+.score-objectives-box-input-inner-category-other {
+  width: 34px;
+  margin-top: 2px;
+  border-width: 1px;
+  border-style: solid;
+  border-top-color: #353535;
+  border-right-color: #303030;
+  border-bottom-color: #303030;
+  border-left-color: #353535;
+  background-color: #2d2d2d;
+  color: white;
+  border-radius: 4px;
+  padding-left: 10px;
+  padding-right: 14px;
+  transition-duration: 200ms;
+}
+
+.score-objectives-box-input-inner-category-info {
+  height: 34px;
+  margin-left: -42px;
+}
+
+.score-objectives-box-input-inner-category-other {
+  height: 53px;
+  margin-left: 4px;
+  margin-bottom: 2px;
+}
+
+@media (max-width: 1248px) {
+  .main-section {
+    display: block;
+  }
+
+  .main-section > div {
+    width: calc(100vw - 42px);
+    padding-top: 0.01mm;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .command-input-section {
+    height: calc(60vh - 40px);
+  }
+  
+  .command-output-section {
+    height: calc(40vh - 40px);
+    margin-top: 16px;
+  }
+}
+
+.command-input-section-item {
+  margin-bottom: 16px
+}

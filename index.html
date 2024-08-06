@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Minecraft: Command Generators, Skins, Servers, Texture Pack and More!">
+  <meta name="author" content="Alexander499">
+  <meta name="keywords" content="Minecraft, Commands, Skins, Servers, Mods, Modpacks, Tools, Text, JSON, Tellraw, Give">
+
+  <!-- Tab -->
+  <title>Eclipse</title>
+  <link rel="shortcut icon" href="images/Eclipse Logo.png" type="image/x-icon">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles/general.css">
+  <link rel="stylesheet" href="styles/header.css">
+  <link rel="stylesheet" href="styles/hero-section.css">
+  <link rel="stylesheet" href="styles/footer.css">
+  <link rel="stylesheet" href="styles/flyout.css">
+  <link rel="stylesheet" href="styles/style.css">
+
+  <!-- Lists -->
+  <script src="lists/flyout-content.js" defer></script>
+  <script src="lists/items.js" defer></script>
+
+  <!-- Scripts -->
+  <script src="scripts/toggle-custom-input.js" defer></script>
+  <script src="scripts/item-input.js" defer></script>
+  <script src="scripts/textarea.js" defer></script>
+  <script src="scripts/flyout.js" defer></script>
+  <script src="scripts/score-objectives-box.js" defer></script>
+  <script src="scripts/command-generation.js" defer></script>
+  <script src="scripts/script.js" defer></script>
+
+  <!-- No Script -->
+  <noscript>Either you have disabled JavaScript or your browser doesn't support it. Get a new Browser like Google Chrome, Microsoft Edge, Safari, Mozilla Firefox, Opera</noscript>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <div class="header-left">
+        <button>
+          <img src="images/Eclipse Logo.png">
+          <p>Eclipse</p>
+        </button>
+      </div>
+      <div class="header-center">
+        <div class="header-center-button-selected"><a>Commands</a></div>
+        <div><a>Skins</a></div>
+        <div><a>Feed</a></div>
+      </div>
+      <div class="header-right">
+        <button class="header-right-button"><p>&#xEA8F;</p></button>
+        <button class="header-right-button"><p>&#xF6FA;</p></button>
+        <button class="header-right-button"><p>&#xE793;</p></button>
+        <button class="profile-and-navigation-button">
+          <div class="profile-and-navigation-button-icon"><p>&#xE700;</p></div>
+          <div class="profile-and-navigation-button-skin-image-container">
+            <img src="https://minotar.net/helm/846e879e7c35462d8c9d8831bbb843b9/100.png">
+          </div>
+        </button>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="hero-section">
+      <h1>Commands</h1>
+      <div>
+        <div><button><p>Give</p></button></div>
+        <div><button><p>Summon</p></button></div>
+        <div><button><p>Execute</p></button></div>
+        <div><button><p>Fill</p></button></div>
+        <div><button><p>Kill</p></button></div>
+        <div><button><p>Item</p></button></div>
+        <div><button><p>Teleport</p></button></div>
+      </div>
+    </div>
+    <div class="main-section">
+      <div class="command-input-section">
+        <h2>Input</h2>
+        <div class="separator"></div>
+        <div class="input-inner">
+          <h3>Target Selectors</h3>
+          <div>
+            <div>
+              <div class="input-inner-category-name"><p>Target</p></div>
+              <div class="input-inner-category-input">
+                <select id="dropdownTarget" onchange="toggleCustomInputTarget()">
+                  <option value="theNearestPlayer">The nearest player</option>
+                  <option value="aRandomPlayer">A random player</option>
+                  <option value="allPlayers">All players</option>
+                  <option value="allEntities">All Entities</option>
+                  <option value="theEntityExecutingTheCommand">The entity executing the command</option>
+                  <option value="playerName">Player name</option>
+                </select>
+                <input type="text" id="inputTarget" class="input-inner-category-input-input" placeholder="Enter player name">
+              </div>
+              <button class="input-inner-category-info segoe-fluent-icons" onclick="toggleFlyout('targetSelectors.target')">&#xE897;</button>
+            </div>
+            <div>
+              <div class="input-inner-category-name"><p>Limit</p></div>
+              <div class="input-inner-category-input"><input id="inputLimit" type="number"></div>
+              <button class="input-inner-category-info segoe-fluent-icons" onclick="toggleFlyout('targetSelectors.limit')">&#xE897;</button>
+            </div>
+            <div>
+              <div class="input-inner-category-name"><p>Sort</p></div>
+              <div class="input-inner-category-input">
+                <select id="dropdownSort">
+                  <option value="unset">Unset</option>
+                  <option value="nearest">Nearest</option>
+                  <option value="furthest">Furthest</option>
+                  <option value="random">Random</option>
+                  <option value="arbitrary">Arbitrary</option>
+                </select>
+              </div>
+              <button class="input-inner-category-info segoe-fluent-icons" onclick="toggleFlyout('targetSelectors.sort')">&#xE897;</button>
+            </div>
+            <div>
+              <div class="input-inner-category-name"><p>x</p></div>
+              <div class="input-inner-category-input"><input id="inputX" type="number"></div>
+              <button class="input-inner-category-info segoe-fluent-icons" onclick="toggleFlyout('targetSelectors.x')">&#xE897;</button>
+            </div>
+            <div>
+              <div class="input-inner-category-name"><p>y</p></div>
+              <div class="input-inner-category-input"><input id="inputY" type="number"></div>
+              <button class="input-inner-category-info segoe-fluent-icons" onclick="toggleFlyout('targetSelectors.y')">&#xE897;</button>
+            </div>
+            <div>
+              <div class="input-inner-category-name"><p>z</p></div>
+              <div class="input-inner-category-input"><input id="inputZ" type="number"></div>
+              <button class="input-inner-category-info segoe-fluent-icons" onclick="toggleFlyout('targetSelectors.z')">&#xE897;</button>
+            </div>
+            <div>
+              <div class="input-inner-category-name"><p>Selection Area</p></div>
+              <div class="input-inner-category-input">
+                <select id="dropdownSelectionArea" onchange="toggleCustomInputSelectionArea()">
+                  <option value="radius">Radius</option>
+                  <option value="volume">Volume</option>
+                </select>
+                <input type="number" id="inputSelectionArea" class="input-inner-category-input-input" placeholder="Enter min radius">
+                <input type="number" id="inputSelectionAreaTwo" class="input-inner-category-input-input" placeholder="Enter max radius">
+                <input type="number" id="inputSelectionAreaThree" class="input-inner-category-input-input" placeholder="Enter positive x direction">
+                <input type="number" id="inputSelectionAreaFour" class="input-inner-category-input-input" placeholder="Enter positive y direction">
+                <input type="number" id="inputSelectionAreaFive" class="input-inner-category-input-input" placeholder="Enter positive z direction">
+              </div>
+              <button class="input-inner-category-info segoe-fluent-icons" onclick="toggleFlyout('')">&#xE897;</button>
+            </div>
+            <div>
+              <div class="input-inner-category-name"><p>Min Vert Rotation</p></div>
+              <div class="input-inner-category-input"><input id="inputMinVertRotation" type="number"></div>
+              <button class="input-inner-category-info segoe-fluent-icons" onclick="toggleFlyout('')">&#xE897;</button>
+            </div>
+            <div>
+              <div class="input-inner-category-name"><p>Max Vert Rotation</p></div>
+              <div class="input-inner-category-input"><input id="inputMaxVertRotation" type="number"></div>
+              <button class="input-inner-category-info segoe-fluent-icons" onclick="toggleFlyout('')">&#xE897;</button>
+            </div>
+            <div>
+              <div class="input-inner-category-name"><p>Min Horiz Rotation</p></div>
+              <div class="input-inner-category-input"><input id="inputMinHorizRotation" type="number"></div>
+              <button class="input-inner-category-info segoe-fluent-icons" onclick="toggleFlyout('')">&#xE897;</button>
+            </div>
+            <div>
+              <div class="input-inner-category-name"><p>Max Horiz Rotation</p></div>
+              <div class="input-inner-category-input"><input id="inputMaxHorizRotation" type="number"></div>
+              <button class="input-inner-category-info segoe-fluent-icons" onclick="toggleFlyout('')">&#xE897;</button>
+            </div>
+            <div>
+              <div class="input-inner-category-name"><p>Team</p></div>
+              <div class="input-inner-category-input">
+                <select id="dropdownTeam">
+                  <option value="onlyThisTeam">Only this team</option>
+                  <option value="notThisTeam">Not this team</option>
+                  <option value="onAnyTeam">On any team</option>
+                  <option value="notAnyTeam">Not any team</option>
+                </select>
+                <div class="input-inner-category-input"><input id="inputTeam" type="text"></div>
+              </div>
+              <button class="input-inner-category-info segoe-fluent-icons" onclick="toggleFlyout('')">&#xE897;</button>
+            </div>
+            <div>
+              <div class="input-inner-category-name"><p>Name</p></div>
+              <div class="input-inner-category-input">
+                <select id="dropdownName">
+                  <option value="thisName">This name</option>
+                  <option value="notThisName">Not this name</option>
+                </select>
+                <div class="input-inner-category-input"><input id="inputName" type="text"></div>
+              </div>
+              <button class="input-inner-category-info segoe-fluent-icons" onclick="toggleFlyout('')">&#xE897;</button>
+            </div>
+            <div>
+              <div class="input-inner-category-name"><p>NBT</p></div>
+              <div class="input-inner-category-input"><input id="inputNbt" type="text"></div>
+              <button class="input-inner-category-info segoe-fluent-icons" onclick="toggleFlyout('')">&#xE897;</button>
+            </div>
+            <div>
+              <div class="input-inner-category-name"><p>Game Mode</p></div>
+              <div class="input-inner-category-input">
+                <select id="dropdownGameMode" onchange="toggleCustomInputGameMode()">
+                  <option value="anyGameMode">Any game mode</option>
+                  <option value="survival">Survival</option>
+                  <option value="creative">Creative</option>
+                  <option value="adventure">Adventure</option>
+                  <option value="spectator">Spectator</option>
+                </select>
+                <label id="checkboxGameMode" class="checkbox-container">
+                  <input type="checkbox" id="inputGameMode" class="input-inner-category-input-input">
+                  <span class="checkmark"></span>
+                  <p>Invert</p>
+                </label>
+              </div>
+              <button class="input-inner-category-info segoe-fluent-icons" onclick="toggleFlyout('')">&#xE897;</button>
+            </div>
+            <div>
+              <div class="input-inner-category-name"><p>Min XP Level</p></div>
+              <div class="input-inner-category-input"><input id="inputMinXpLevel" type="number"></div>
+              <button class="input-inner-category-info segoe-fluent-icons" onclick="toggleFlyout('')">&#xE897;</button>
+            </div>
+            <div>
+              <div class="input-inner-category-name"><p>Max XP Level</p></div>
+              <div class="input-inner-category-input"><input id="inputMaxXpLevel" type="number"></div>
+              <button class="input-inner-category-info segoe-fluent-icons" onclick="toggleFlyout('')">&#xE897;</button>
+            </div>
+            <div>
+              <div class="input-inner-category-name"><p>Advancements</p></div>
+              <div class="input-inner-category-input"><input id="inputAdvancements" type="text"></div>
+              <button class="input-inner-category-info segoe-fluent-icons" onclick="toggleFlyout('')">&#xE897;</button>
+            </div>
+            <div>
+              <div class="input-inner-category-name"><p>Tags</p></div>
+              <div class="input-inner-category-input"><input id="inputTags" type="text"></div>
+              <button class="input-inner-category-info segoe-fluent-icons" onclick="toggleFlyout('')">&#xE897;</button>
+            </div>
+            <div>
+              <div class="input-inner-category-name"><p>Predicates</p></div>
+              <div class="input-inner-category-input"><input id="inputPredicates" type="text"></div>
+              <button class="input-inner-category-info segoe-fluent-icons" onclick="toggleFlyout('')">&#xE897;</button>
+            </div>
+            <div>
+              <div class="input-inner-category-name"><p>Score Objectives</p></div>
+              <div class="input-inner-category-input">
+                <button id="addScoreObjectivesBoxButton" class="input-inner-category-input-button segoe-fluent-icons">&#xE710;</button>
+              </div>
+              <button class="input-inner-category-info segoe-fluent-icons" onclick="toggleFlyout('')">&#xE897;</button>
+            </div>
+            <div id="scoreObjectivesBoxContainer" class="score-objectives-box-main"></div>
+          </div>
+          <h3>Item</h3>
+          <div class="command-input-section-item">
+            <div>
+              <div class="input-inner-category-name"><p>Item</p></div>
+              <div class="input-inner-category-input">
+                <select id="dropdownItem" onchange="toggleCustomInputSort()"></select>
+              </div>
+              <button class="input-inner-category-info segoe-fluent-icons" onclick="toggleFlyout('item.item')">&#xE897;</button>
+            </div>
+            <div>
+              <div class="input-inner-category-name"><p>Count</p></div>
+              <div class="input-inner-category-input"><input id="inputCount" type="number"></div>
+              <button class="input-inner-category-info segoe-fluent-icons" onclick="toggleFlyout('item.count')">&#xE897;</button>
+            </div>
+            <div>
+              <div class="input-inner-category-name"><p>Max Stack Size</p></div>
+              <div class="input-inner-category-input"><input id="inputMaxStackSize" type="number"></div>
+              <button class="input-inner-category-info segoe-fluent-icons" onclick="toggleFlyout('item.maxStackSize')">&#xE897;</button>
+            </div>
+            <div>
+              <div class="input-inner-category-name"><p>Custom Name</p></div>
+              <div class="input-inner-category-input"><input id="inputCustomName" type="text"></div>
+              <button class="input-inner-category-info segoe-fluent-icons" onclick="toggleFlyout('')">&#xE897;</button>
+            </div>
+            <div>
+              <div class="input-inner-category-name"><p>Item Name</p></div>
+              <div class="input-inner-category-input"><input id="inputItemName" type="text"></div>
+              <button class="input-inner-category-info segoe-fluent-icons" onclick="toggleFlyout('')">&#xE897;</button>
+            </div>
+            <div>
+              <div class="input-inner-category-name"><p>Lore Name</p></div>
+              <div class="input-inner-category-input"><input id="inputLoreName" type="text"></div>
+              <button class="input-inner-category-info segoe-fluent-icons" onclick="toggleFlyout('')">&#xE897;</button>
+            </div>
+            <div>
+              <div class="input-inner-category-name"><p>Max Damage</p></div>
+              <div class="input-inner-category-input"><input id="inputMaxDamage" type="text"></div>
+              <button class="input-inner-category-info segoe-fluent-icons" onclick="toggleFlyout('')">&#xE897;</button>
+            </div>
+            <div>
+              <div class="input-inner-category-name"><p>Damage</p></div>
+              <div class="input-inner-category-input"><input id="inputDamage" type="text"></div>
+              <button class="input-inner-category-info segoe-fluent-icons" onclick="toggleFlyout('')">&#xE897;</button>
+            </div>
+            <div>
+              <div class="input-inner-category-name"><p>Repair Cost</p></div>
+              <div class="input-inner-category-input"><input id="inputRepairCost" type="text"></div>
+              <button class="input-inner-category-info segoe-fluent-icons" onclick="toggleFlyout('')">&#xE897;</button>
+            </div>
+            <div>
+              <div class="input-inner-category-name"><p>Unbreakable</p></div>
+              <div class="input-inner-category-input">
+                <select id="dropdownUnbreakable">
+                  <option value="unset">Unset</option>
+                  <option value="unset">True</option>
+                  <option value="false">False</option>
+                </select>
+              </div>
+              <button class="input-inner-category-info segoe-fluent-icons" onclick="toggleFlyout('')">&#xE897;</button>
+            </div>
+            <div>
+              <div class="input-inner-category-name"><p>Show In Tooltip</p></div>
+              <div class="input-inner-category-input">
+                <select id="dropdownShowInTooltip">
+                  <option value="unset">Unset</option>
+                  <option value="unset">True</option>
+                  <option value="false">False</option>
+                </select>
+              </div>
+              <button class="input-inner-category-info segoe-fluent-icons" onclick="toggleFlyout('')">&#xE897;</button>
+            </div>
+            <div>
+              <div class="input-inner-category-name"><p>Fire Resistant</p></div>
+              <div class="input-inner-category-input">
+                <select id="dropdownFireResistant">
+                  <option value="unset">Unset</option>
+                  <option value="unset">True</option>
+                  <option value="false">False</option>
+                </select>
+              </div>
+              <button class="input-inner-category-info segoe-fluent-icons" onclick="toggleFlyout('')">&#xE897;</button>
+            </div>
+            <div>
+              <div class="input-inner-category-name"><p>Rarity</p></div>
+              <div class="input-inner-category-input">
+                <select id="dropdownRarity">
+                  <option value="unset">Unset</option>
+                  <option value="common">Common</option>
+                  <option value="uncommon">Uncommon</option>
+                  <option value="rare">Rare</option>
+                  <option value="epic">Epic</option>
+                </select>
+              </div>
+              <button class="input-inner-category-info segoe-fluent-icons" onclick="toggleFlyout('')">&#xE897;</button>
+            </div>
+            <div>
+              <div class="input-inner-category-name"><p>Custom Model Data</p></div>
+              <div class="input-inner-category-input"><input id="inputCustomModelData" type="text"></div>
+              <button class="input-inner-category-info segoe-fluent-icons" onclick="toggleFlyout('')">&#xE897;</button>
+            </div>
+            <div>
+              <div class="input-inner-category-name"><p>Custom Data</p></div>
+              <div class="input-inner-category-input"><input id="inputCustomData" type="text"></div>
+              <button class="input-inner-category-info segoe-fluent-icons" onclick="toggleFlyout('')">&#xE897;</button>
+            </div>
+            <div>
+              <div class="input-inner-category-name"><p>Hide Tooltip</p></div>
+              <div class="input-inner-category-input">
+                <select id="dropdownHideTooltip">
+                  <option value="unset">Unset</option>
+                  <option value="unset">True</option>
+                  <option value="false">False</option>
+                </select>
+              </div>
+              <button class="input-inner-category-info segoe-fluent-icons" onclick="toggleFlyout('')">&#xE897;</button>
+            </div>
+            <div>
+              <div class="input-inner-category-name"><p>Hide Additional Tooltip</p></div>
+              <div class="input-inner-category-input">
+                <select id="dropdownHideAdditionalTooltip">
+                  <option value="unset">Unset</option>
+                  <option value="unset">True</option>
+                  <option value="false">False</option>
+                </select>
+              </div>
+              <button class="input-inner-category-info segoe-fluent-icons" onclick="toggleFlyout('')">&#xE897;</button>
+            </div>
+            <div>
+              <div class="input-inner-category-name"><p>Can Place On</p></div>
+              <div class="input-inner-category-input"><input id="inputCanPlaceOn" type="text"></div>
+              <button class="input-inner-category-info segoe-fluent-icons" onclick="toggleFlyout('')">&#xE897;</button>
+            </div>
+            <div>
+              <div class="input-inner-category-name"><p>Can Break</p></div>
+              <div class="input-inner-category-input"><input id="inputCanBreak" type="text"></div>
+              <button class="input-inner-category-info segoe-fluent-icons" onclick="toggleFlyout('')">&#xE897;</button>
+            </div>
+            <div>
+              <div class="input-inner-category-name"><p>Enchantments</p></div>
+              <div class="input-inner-category-input"><input id="inputEnchantments" type="text"></div>
+              <button class="input-inner-category-info segoe-fluent-icons" onclick="toggleFlyout('')">&#xE897;</button>
+            </div>
+            <div>
+              <div class="input-inner-category-name"><p>Food</p></div>
+              <div class="input-inner-category-input"><input id="inputFood" type="text"></div>
+              <button class="input-inner-category-info segoe-fluent-icons" onclick="toggleFlyout('')">&#xE897;</button>
+            </div>
+            <div>
+              <div class="input-inner-category-name"><p>Jukebox Playable</p></div>
+              <div class="input-inner-category-input"><input id="inputJukeboxPlayable" type="text"></div>
+              <button class="input-inner-category-info segoe-fluent-icons" onclick="toggleFlyout('')">&#xE897;</button>
+            </div>
+            <div>
+              <div class="input-inner-category-name"><p>Tool</p></div>
+              <div class="input-inner-category-input"><input id="inputTool" type="text"></div>
+              <button class="input-inner-category-info segoe-fluent-icons" onclick="toggleFlyout('')">&#xE897;</button>
+            </div>
+            <div>
+              <div class="input-inner-category-name"><p>Attribute Modifiers</p></div>
+              <div class="input-inner-category-input"><input id="inputAttributeModifiers" type="text"></div>
+              <button class="input-inner-category-info segoe-fluent-icons" onclick="toggleFlyout('')">&#xE897;</button>
+            </div>
+            <div>
+              <div class="input-inner-category-name"><p>Block State</p></div>
+              <div class="input-inner-category-input"><input id="inputBlockState" type="text"></div>
+              <button class="input-inner-category-info segoe-fluent-icons" onclick="toggleFlyout('')">&#xE897;</button>
+            </div>
+            <!-- More item options. -->
+          </div>
+        </div>
+      </div>
+      <div class="command-output-section">
+        <h2>Output</h2>
+        <div class="separator"></div>
+        <div class="output-inner">
+          <textarea id="outputTextarea" disabled oninput="updateCharCount()" maxlength="32500"></textarea>
+          <div class="output-inner-bottom">
+            <p id="charCountOutput">0 Chars</p>
+            <button id="copyOutputButton" onClick="copyOutput()">
+              <p class="segoe-fluent-icons">&#xE8C8;</p>
+              <p>Copy</p>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-about">
+      <h2>Title</h2>
+      <div class="footer-separator"></div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet augue ante. Quisque eu tempor purus, non imperdiet purus. Integer sit amet neque in sem congue aliquet. Nunc elementum ac lacus non facilisis. Praesent tempus, tellus nec fermentum aliquet, purus justo cursus elit, at aliquam sapien magna sit amet tortor. Curabitur tristique elit eu blandit rutrum.</p>
+    </div>
+    <div class="footer-links">
+      <div><a>Link #1</a></div>
+      <div><a>Link #2</a></div>
+      <div><a>Link #3</a></div>
+      <div><a>Link #4</a></div>
+      <div><a>Link #5</a></div>
+      <div><a>Link #6</a></div>
+    </div>
+    <div class="footer-information">
+      <p>This website is still in early development! There are many bugs and it is very incomplete.</p>
+    </div>
+  </footer>
+  <div id="flyout" class="flyout">
+    <div id="flyoutContent" class="flyout-content"></div>
+    <div class="flyout-buttons">
+      <button id="flyoutLinkContent"><a target="_blank">Learn more</a></button>
+      <button onclick="hideFlyout()">Close</button>
+    </div>
+  </div>
+</body>
+</html>

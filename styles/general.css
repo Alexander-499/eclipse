@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  z-index: 10;
+  outline: none;
+}
+
+.segoe-fluent-icons {
+  font-family: Segoe Fluent Icons;
+}
+
+body {
+  background-color: #18181b;
+  color: white;
+}

@@ -1,0 +1,58 @@
+.hero-section {
+  height: 460px;
+  padding-top: 56px;
+  /* background: linear-gradient(175deg, rgba(82,0,91,1) 0%, rgba(67,0,91,1) 23%, rgba(0,129,140,1) 100%); */
+  background-image: url("https://ccdn.g-portal.com/blog_graphic_minecraft_kirsch_3_87fea89966.png");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  backdrop-filter: blur(20px);
+  border-bottom-color: rgba(39, 39, 39, 0.9);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  box-shadow: inset 0px -12px 50px 0 rgba(0,0,0,0.67);
+}
+
+.hero-section h1 {
+  text-align: center;
+  font-size: 56px;
+  font-family: Manrope;
+  font-weight: 900;
+  margin-top: 128px;
+}
+
+.hero-section > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 64px;
+  overflow: auto;
+}
+
+.hero-section > div > div > button {
+  height: 60px;
+  border-radius: 30px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #5c5c62;
+  padding: 0 20px;
+  margin: 0 6px;
+  background-color: #303035;
+  transition-duration: 200ms;
+}
+
+.hero-section > div > div > button:hover {
+  background-color: #4d4d57;
+  cursor: pointer;
+}
+
+.hero-section > div > div > button:active {
+  background-color: #18181b;
+}
+
+.hero-section > div > div > button > p {
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: Inter;
+}
