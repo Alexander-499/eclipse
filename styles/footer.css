@@ -35,6 +35,10 @@ footer {
   margin-left: 8%;
 }
 
+.footer-links a:visited {
+  color: white;
+}
+
 .footer-links a:hover {
   text-decoration: underline;
   cursor: pointer;
@@ -49,6 +53,8 @@ footer p,
 footer h2,
 footer a {
   text-shadow: 2px 2px 0 black, 0 0 16px black;
+  color: white;
+  text-decoration: none;
 }
 
 footer p::selection,
