@@ -3,9 +3,9 @@
   padding-top: 56px;
   /* background: linear-gradient(175deg, rgba(82,0,91,1) 0%, rgba(67,0,91,1) 23%, rgba(0,129,140,1) 100%); */
   background-image: url("https://iili.io/dY0Elql.png");
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
   backdrop-filter: blur(20px);
   border-bottom-color: rgba(39, 39, 39, 0.9);
   border-bottom-width: 1px;
