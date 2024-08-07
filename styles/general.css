@@ -16,3 +16,7 @@ body {
   image-rendering: pixelated; */
   color: white;
 }
+
+::-webkit-scrollbar {
+  height: 8px;
+}

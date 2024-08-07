@@ -163,6 +163,8 @@
 
 .input-inner-category-input {
   width: calc(100% - 256px - 48px);
+  overflow-x: auto;
+  overflow-y: hidden;
   height: 40px;
   display: flex;
 }
