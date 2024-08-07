@@ -68,3 +68,78 @@ footer h2::selection,
 footer a::selection {
   background: rgba(173, 216, 230, 0.1);
 }
+
+@media (max-width: 480px) {
+  .footer-about {
+    width: 35%;
+    font-size: 13px;
+  }
+
+  .footer-links {
+    width: 30%;
+  }
+
+  .footer-information {
+    width: 35%;
+  }
+}
+
+@media (max-width: 360px) {
+  .footer-about {
+    font-size: 12px;
+  }
+
+  .footer-links {
+    font-size: 16px;
+  }
+
+  .footer-information {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 320px) {
+  .footer-about {
+    font-size: 10px;
+  }
+
+  .footer-links {
+    font-size: 14px;
+  }
+
+  .footer-information {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 280px) {
+  .footer-about {
+    width: 55%;
+    font-size: 13px;
+  }
+
+  .footer-links {
+    width: 45%;
+    font-size: 20px;
+  }
+
+  .footer-information {
+    display: none;
+  }
+}
+
+@media (max-width: 220px) {
+  .footer-about {
+    display: none;
+  }
+
+  .footer-links {
+    width: 100%;
+    font-size: 26px;
+    text-align: center;
+  }
+
+  footer {
+    height: 200px;
+  }
+}
