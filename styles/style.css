@@ -169,6 +169,22 @@
   display: flex;
 }
 
+@media (max-width: 640px) {
+  .input-inner-category-name {
+    width: 192px;
+  }
+
+  .input-inner-category-name p {
+    text-align: left;
+    font-size: 14px;
+    margin-left: 16px;
+  }
+
+  .input-inner-category-input {
+    width: calc(100% - 192px - 48px);
+  }
+}
+
 .input-inner-category-input > input,
 .input-inner-category-input > select {
   height: 32px;
