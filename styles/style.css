@@ -318,6 +318,7 @@ option {
 
 .score-objectives-box-main {
   margin-left: 256px;
+  overflow-x: scroll;
 }
 
 .score-objectives-box {
