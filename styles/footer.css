@@ -1,11 +1,11 @@
 footer {
-    height: 192px;
-    width: min(calc(100% - 264px), calc(1280px - 264px));
-    margin-left: max(100px, calc((100% - 1280px + 200px) / 2));
+    height: max(192px, calc((1280px - 100vw) / 1.5), calc((720px - 100vw) / 1));
+    width: min(calc(100% - 66px), calc(1280px - 264px));
+    margin-left: max(1px, calc((100% - 1280px + 200px) / 2));
     background: url("https://iili.io/dY0Eas4.jpg");
-    background-position: bottom; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover; /* Resize the background image to cover the entire container */
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: inherit;
     background-color: #272729;
     margin-top: 32px;
     border-radius: 48px 48px 0 0;
@@ -32,7 +32,7 @@ footer {
   font-size: 120%;
   width: 20%;
   margin-top: 16px;
-  margin-left: 8%;
+  margin-left: 6vw;
 }
 
 .footer-links a:visited {
@@ -47,6 +47,12 @@ footer {
 .footer-information {
   width: 25%;
   font-size: 120%;
+}
+
+.footer-version {
+  text-align: center;
+  font-size: 24px;
+  margin-top: 64px;
 }
 
 footer p,
