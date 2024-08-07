@@ -5,7 +5,7 @@ footer {
     background: url("https://iili.io/dY0Eas4.jpg");
     background-position: bottom;
     background-repeat: no-repeat;
-    background-size: inherit;
+    background-size: cover;
     background-color: #272729;
     margin-top: 32px;
     border-radius: 48px 48px 0 0;

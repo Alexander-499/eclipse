@@ -11,5 +11,8 @@
 
 body {
   background-color: #18181b;
+  /* background-image: url("https://iili.io/dax9TAP.png");
+  background-size: 48px;
+  image-rendering: pixelated; */
   color: white;
 }

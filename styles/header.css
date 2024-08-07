@@ -33,34 +33,36 @@ header::-webkit-scrollbar {
   width: 228px;
 }
 
-.header-left > button {
+.header-left > a {
   display: flex;
   background-color: transparent;
   border: none;
+  cursor: pointer;
   margin-left: 8px;
+  text-decoration: none;
   transition-duration: 500ms;
 }
 
-.header-left > button:hover {
+.header-left > a:hover {
   transform: scale(1.05);
 }
 
-.header-left > button:active {
+.header-left > a:active {
   transform: scale(0.95);
 }
 
-.header-left > button > img {
+.header-left > a > img {
   height: 48px;
   width: 48px;
   margin-top: 12px;
   transition-duration: 500ms;
 }
 
-.header-left > button:hover > img {
+.header-left > a:hover > img {
   transform: rotate(-25deg);
 }
 
-.header-left > button > p {
+.header-left > a > p {
   color: white;
   font-family: Manrope;
   font-size: 28px;

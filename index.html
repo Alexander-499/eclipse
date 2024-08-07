@@ -10,7 +10,7 @@
 
   <!-- Tab -->
   <title>Eclipse</title>
-  <link rel="shortcut icon" href="images/eclipse-logo.png" type="image/x-icon">
+  <link rel="shortcut icon" href="assets/images/eclipse-logo.png" type="image/x-icon">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -44,35 +44,10 @@
   <noscript>Either you have disabled JavaScript or your browser doesn't support it. Get a new Browser like Google Chrome, Microsoft Edge, Safari, Mozilla Firefox, Opera</noscript>
 </head>
 <!-- <meta name="google-signin-client_id" content="277266757368-8safuf3q1u7167oo6chhggrvrhgna4u0.apps.googleusercontent.com">
-<div class="g-signin2" data-onsuccess="onSignIn"></div>
-<p>DO NOT SIGN IN, UNLESS YOU KNOW WHAT YOU ARE DOING</p>--> 
+<div class="g-signin2" data-onsuccess="onSignIn"></div> -->
 <body>
-  <header>
-    <div class="header-content">
-      <div class="header-left">
-        <button>
-          <img src="images/eclipse-logo.png">
-          <p>Eclipse</p>
-        </button>
-      </div>
-      <div class="header-center">
-        <div class="header-center-button-selected"><a>Commands</a></div>
-        <div><a>Skins</a></div>
-        <div><a>Feed</a></div>
-      </div>
-      <div class="header-right">
-        <button class="header-right-button"><p>&#xEA8F;</p></button>
-        <button class="header-right-button"><p>&#xF6FA;</p></button>
-        <button class="header-right-button"><p>&#xE793;</p></button>
-        <button class="profile-and-navigation-button">
-          <div class="profile-and-navigation-button-icon"><p>&#xE700;</p></div>
-          <div class="profile-and-navigation-button-skin-image-container">
-            <img src="https://minotar.net/helm/846e879e7c35462d8c9d8831bbb843b9/100.png">
-          </div>
-        </button>
-      </div>
-    </div>
-  </header>
+  <?php $IPATH = $_SERVER["DOCUMENT_ROOT"]."/assets/php";
+    include($IPATH."header.html"); ?>
   <main>
     <div class="hero-section">
       <h1>Commands</h1>
