@@ -1,0 +1,120 @@
+.nav-menu {
+  width: 248px;
+  position: fixed;
+  top: 64px;
+  right: calc(8px);
+  border-width: 1px;
+  border-style: solid;
+  border-top-color: #353535;
+  border-right-color: #303030;
+  border-bottom-color: #303030;
+  border-left-color: #353535;
+  background-color: #2e2e2e;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  color: white;
+  border-radius: 12px;
+  font-family: Segoe UI;
+  z-index: 1000;
+  /* display: none;
+  transform: translateY(-50%) scale(0.67, 0); */
+  transition: transform 0.3s ease;
+}
+
+.nav-menu.show {
+  display: block;
+  transform: translateY(0) scale(1, 1);
+}
+
+.nav-menu-profile {
+  margin: 8px;
+}
+
+.nav-menu-profile > div {
+  gap: 8px;
+}
+
+.nav-menu-profile-information {
+  display: flex;
+}
+
+.nav-menu-profile-button-container {
+  height: 64px;
+  width: 180px;
+}
+
+.nav-menu-profile-button {
+  display: flex;
+  background-color: transparent;
+  border: none;
+  align-items: center;
+  cursor: pointer;
+  transition-duration: 300ms;
+}
+
+.nav-menu-profile-button:hover {
+  transform: scale(1.05);
+}
+
+.nav-menu-profile-button:active {
+  transform: scale(0.95);
+}
+
+.nav-menu-profile-button-head {
+  margin: 8px;
+}
+
+.nav-menu-profile-button-head > img {
+  height: 48px;
+  border-radius: 50%;
+}
+
+.nav-menu-profile-button-head > div {
+  height: 8px;
+  width: 8px;
+  background-color: green;
+  position: absolute;
+  top: 48px;
+  left: 48px;
+  border: #2e2e2e 4px solid;
+  border-radius: 50%;
+}
+
+.nav-menu-profile-button-text {
+  height: 48px;
+}
+
+.nav-menu-profile-button-text > p {
+  height: 24px;
+  text-align: left;
+}
+
+.nav-menu-profile-button-text-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+}
+
+.nav-menu-profile-button-text-joined {
+  font-size: 14px;
+  font-weight: 500;
+  color: gray;
+}
+
+.nav-menu-settings-button-container {
+  height: 64px;
+  width: 48px;
+}
+
+.nav-menu-settings-button-container > button {
+  height: 32px;
+  width: 32px;
+  background-color: transparent;
+  border: none;
+  margin: 16px 8px;
+  cursor: pointer;
+}
+
+.nav-menu-settings-button-container > button > p {
+  color: white;
+  font-size: 20px;
+}

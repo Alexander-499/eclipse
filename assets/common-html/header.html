@@ -1,7 +1,7 @@
 <header>
   <div class="header-content">
     <div class="header-left">
-      <a href="/">
+      <a href>
         <img src="assets/images/eclipse-logo.png">
         <p>Eclipse</p>
       </a>
@@ -15,12 +15,54 @@
       <button class="header-right-button"><p>&#xEA8F;</p></button>
       <button class="header-right-button"><p>&#xF6FA;</p></button>
       <button class="header-right-button"><p>&#xE793;</p></button>
-      <button class="profile-and-navigation-button">
+      <button class="profile-and-navigation-button" onclick="toggleNavMenu()">
         <div class="profile-and-navigation-button-icon"><p>&#xE700;</p></div>
         <div class="profile-and-navigation-button-skin-image-container">
-          <img src="https://minotar.net/helm/846e879e7c35462d8c9d8831bbb843b9/100.png">
+          <img src="https://minotar.net/helm/Alexander499/100.png">
         </div>
       </button>
     </div>
   </div>
 </header>
+
+<div id="navMenu" class="nav-menu">
+  <div class="nav-menu-profile">
+    <div class="nav-menu-profile-information">
+      <div class="nav-menu-profile-button-container">
+        <button class="nav-menu-profile-button">
+          <div class="nav-menu-profile-button-head">
+            <img src="https://minotar.net/helm/Alexander499/100.png">
+            <div></div>
+          </div>
+          <div class="nav-menu-profile-button-text">
+            <p class="nav-menu-profile-button-text-name">Alexander499</p>
+            <p class="nav-menu-profile-button-text-joined">Joined Jun 2024</p>
+          </div>
+        </button>
+      </div>
+      <div class="nav-menu-settings-button-container">
+        <button>
+          <p class="segoe-fluent-icons">
+            &#xE713;
+          </p>
+        </button>
+      </div>
+    </div>
+    <div class="nav-menu-profile-xp">
+      <progress value="60" max="100"></progress>
+      <div>
+        <p>60 XP of 100 XP</p>
+      </div>
+    </div>
+    <div class="nav-menu-profile-buttons">
+      <button>Messages</button>
+      <button>Bookmarks</button>
+    </div>
+  </div>
+  <div class="nav-menu-divider"></div>
+  <div class="nav-menu-options">
+    <button>Commands</button>
+    <button>Skins</button>
+    <button>Feed</button>
+  </div>
+</div>
